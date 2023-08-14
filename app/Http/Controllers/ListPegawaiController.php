@@ -12,15 +12,17 @@ class ListPegawaiController extends Controller
     public function beranda()
     {
         $pegawai = \App\Models\ListPegawai::with(['naikkgb', 'naikkgb.gapok'])->orderBy('id_peg', 'DESC')->limit(5)->get();
-
+        
         $total_pegawai = \App\Models\ListPegawai::all()->count();
         $total_user = \App\Models\User::all()->count();
+        $g= \App\Models\Golongan::all;
         $lk = \App\Models\ListPegawai::where('jns_kelamin', 'L')->count();
         $pr = \App\Models\ListPegawai::where('jns_kelamin', 'P')->count();
         return view('pegawai.index', [
             'pegawai' => $pegawai,
             'total_pegawai' => $total_pegawai,
             'total_user' => $total_user,
+
             'lk' => $lk,
             'pr' => $pr
         ]);
@@ -35,7 +37,9 @@ class ListPegawaiController extends Controller
         $agama = \App\Models\Agama::all();
         $pendidikan = \App\Models\Pendidikan::all();
         $jbts = \App\Models\jabatanstruktural::all();
+      
         return view('pegawai.list', [
+            
             'pegawai' => $pegawai,
             'user' => $user,
             'agama' => $agama,
@@ -59,7 +63,7 @@ class ListPegawaiController extends Controller
             'niplama' => 'required', //tab 2
             'agama' => 'required',
             'pendidikan' => 'required',
-            'namasekolah' => 'required',
+            '0bsekolah' => 'required',
             'sttb' => 'required',
             'gelard' => 'required',
             'gelarb' => 'required',

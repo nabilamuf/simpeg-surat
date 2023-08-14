@@ -32,6 +32,13 @@ Route::group(['middleware' => 'auth'], function () {
         return view('pegawai.profile');
     });
     Route::get('/list', [App\Http\Controllers\ListPegawaiController::class, 'index']);
+    Route::get('/list_kontrak', [App\Http\Controllers\ListPegawaiController::class, 'index']);
+    Route::get('/list_p3k', [App\Http\Controllers\ListPegawaiController::class, 'index']);
+
+    Route::get('/pegawai/tmunitkeja/tambah', [App\Http\Controllers\unitkerjaController::class, 'index']);
+
+    
+
     Route::get('/pegawai/tambah', [App\Http\Controllers\ListPegawaiController::class, 'tambah']);
     Route::post('/pegawai/tambah/proses', [App\Http\Controllers\ListPegawaiController::class, 'tambah']);
     Route::post('/pegawai/edit/{id}', [App\Http\Controllers\ListPegawaiController::class, 'edit']);

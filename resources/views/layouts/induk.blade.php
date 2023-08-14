@@ -169,7 +169,7 @@
           <div id="collapsePagesPNS" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">pegawai :</h6>
-              <a class="collapse-item" href="/pegawai/tmagama/tambah">PNS </a>
+              <a class="collapse-item" href="/list">PNS </a>
               <h6 class="collapse-header">cetak surat :</h6>
               <a class="collapse-item" href="/pegawai/tmagama/tambah"> Surat Cuti</a>
               <a class="collapse-item" href="/pegawai/tmdiklat/tambah"> Surat Rekomendasi</a>
@@ -192,7 +192,7 @@
           <div id="collapsePagesP3K" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">pegawai :</h6>
-              <a class="collapse-item" href="/pegawai/tmagama/tambah">P3K</a>
+              <a class="collapse-item" href="/list_p3k">P3K</a>
               <h6 class="collapse-header">cetak surat :</h6>
               <a class="collapse-item" href="/pegawai/tmagama/tambah"> Surat Cuti</a>
               <a class="collapse-item" href="/pegawai/tmdiklat/tambah"> Surat Rekomendasi</a>
@@ -214,7 +214,7 @@
           <div id="collapsePageskontrak" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">pegawai :</h6>
-              <a class="collapse-item" href="/pegawai/tmagama/tambah">Kontrak </a>
+              <a class="collapse-item" href="/list_kontrak">Kontrak </a>
               <h6 class="collapse-header">cetak surat :</h6>
               <a class="collapse-item" href="/pegawai/tmagama/tambah"> Surat Cuti</a>
               <a class="collapse-item" href="/pegawai/tmdiklat/tambah"> Surat Rekomendasi</a>
@@ -249,6 +249,7 @@
               <a class="collapse-item" href="/pegawai/tmdiklat/tambah">Kategori Jabatan</a>
               <a class="collapse-item" href="/pegawai/tmjabatanf/tambah">Jabatan Fungsional</a>
               <a class="collapse-item" href="/pegawai/tmgapok/tambah">Golongan</a>
+              <a class="collapse-item" href="/pegawai/tmunitkeja/tambah">Unit Kerja</a>
         
    
             </div>

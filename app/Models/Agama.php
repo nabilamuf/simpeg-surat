@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Agama extends Model
 {
     use HasFactory;
-    protected $table = 'tm_agama';
+    protected $table = 'jabatans';
 
     public function ListPegawai()
     {

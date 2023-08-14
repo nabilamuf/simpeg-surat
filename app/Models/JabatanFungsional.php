@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class JabatanFungsional extends Model
 {
     use HasFactory;
-    protected $table = 'tm_jabatanf';
+    protected $table = 'fungsionals';
 
 
     public function riwayatjabatanf()

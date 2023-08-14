@@ -8,7 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class ListPegawai extends Model
 {
     use HasFactory;
-    protected $table = 'pegawai';
+    protected $table = 'pegawais';
+
+    public function golongan()
+    {
+        return $this->hasMany(Golongan::class);
+    }
 
     public function agama()
     {

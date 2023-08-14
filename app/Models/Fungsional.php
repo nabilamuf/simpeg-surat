@@ -2,13 +2,15 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Pegawai;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class UnitKerja extends Model
+class Fungsional extends Model
 {
     use HasFactory;
-    protected $table = "unit_kerja";
+    protected $guarded = ['id'];
+
 
     public function pegawais()
     {

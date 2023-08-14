@@ -25,21 +25,26 @@
                 <div class="col-sm-12">
                 <table class="table table-bordered dataTable" id="dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;" width="100%" cellspacing="0"> 
                   <thead>
-                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 162px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Kode Jabatan Fungsional</th>
-                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">Nama Jabatan Fungsional</th>
+                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 162px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Kode Unit Kerja</th>
+                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">Kepala</th>
+                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">nama</th>
+                    <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">Ket</th>
                     <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">Aksi</th>
                     </thead>
                   <tfoot>
                   </tfoot>
                   <tbody>
-                  @foreach($jbtf as $d)
+                  @foreach($pdd as $d)
                   <tr role="row" class="odd">
-                  <td>{{$d->id}}</td>
+                  <td>{{$d->kode_unitkerja}}</td>
+                  <td>{{$d->kepala}}</td>
                   <td>{{$d->nama}}</td>
+                  <td>{{$d->ket}}</td>
+
                   <td>
                     <!-- Button trigger modal -->
                     <!-- Button trigger modal -->
-                    <a href="/pegawai/tmgolongan/hapus/{{$d->kode_jbtf}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                    <a href="/pegawai/tmpendidikan/hapus/{{$d->kode_pdd}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
                 
                   </td>
                   </tr>
@@ -66,12 +71,12 @@
       </div>
       <div class="modal-body">
       <div class="card p-3">
-        <form action="/pegawai/tmjabatanf/tambah/proses" method="post">
+        <form action="/pegawai/tmpendidikan/tambah/proses" method="post">
         {{csrf_field()}}
         <div class="row">
         <div class="col-md-6">
-        <label >Jabatan</label>
-        <input type="text" name="nama_jabatan" class="form-control">
+        <label >Pendidikan</label>
+        <input type="text" name="pendidikan" class="form-control">
         </div>
         </div>
 

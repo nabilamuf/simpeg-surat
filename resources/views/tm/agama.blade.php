@@ -34,8 +34,8 @@
                   <tbody>
                   @foreach($agama as $agm)
                   <tr role="row" class="odd">
-                  <td>{{$agm->kode_agama}}</td>
-                  <td>{{$agm->agama}}</td>
+                  <td>{{$agm->id}}</td>
+                  <td>{{$agm->nama}}</td>
                   <td>
                     <!-- Button trigger modal -->
                     <!-- Button trigger modal -->

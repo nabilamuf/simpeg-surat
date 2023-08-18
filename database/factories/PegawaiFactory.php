@@ -25,9 +25,11 @@ class PegawaiFactory extends Factory
             'tmt' => $this->faker->date(),
             'tmt_masuk' => $this->faker->date(),
             'j_kelamin' => $this->faker->randomElement(['L', 'P', 'O']),
+            'kategori_id' => mt_rand(1, 2),
             'jabatan_id' => mt_rand(1, 2),
             'golongan_id' => mt_rand(1, 2),
-            'fungsional_id' => mt_rand(1, 2)
+            'fungsional_id' => mt_rand(1, 2),
+            'unit_id' => mt_rand(1, 2)
 
         ];
     }

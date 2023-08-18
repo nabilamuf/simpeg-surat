@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use App\Models\Unit;
 use App\Models\Jabatan;
 use App\Models\Golongan;
+use App\Models\Kategori;
 use App\Models\Fungsional;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,16 +21,19 @@ class Pegawai extends Model
     }
     public function golongan()
     {
-        return $this->hasMany(Golongan::class);
+        return $this->belongsTo(Golongan::class);
     }
 
     public function fungsional()
     {
-        return $this->hasMany(Fungsional::class);
+        return $this->belongsTo(Fungsional::class);
     }
-    public function unit_kerja()
+    public function unit()
     {
-        return $this->hasMany(unit_kerja::class);
+        return $this->belongsTo(Unit::class);
     }
-
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
+    }
 }

@@ -7,7 +7,7 @@ use App\Models\Golongan;
 use App\Models\Jabatan;
 use App\Models\Kategori;
 use App\Models\Pegawai;
-
+use App\Models\Unit;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -52,6 +52,15 @@ class DatabaseSeeder extends Seeder
             'nama' => 'V',
             'slug' => 'v',
             'kategori_id' => 1
+        ]);
+
+        Unit::create([
+            'nama' => 'Unit 19',
+            'slug' => 'unit-19'
+        ]);
+        Unit::create([
+            'nama' => 'Unit 18',
+            'slug' => 'unit-18'
         ]);
 
         Fungsional::create([

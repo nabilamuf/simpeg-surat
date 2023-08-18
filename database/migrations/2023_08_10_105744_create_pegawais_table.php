@@ -25,10 +25,11 @@ class CreatePegawaisTable extends Migration
             $table->date('tmt_sk');
             $table->date('tmt_masuk');
             $table->enum('j_kelamin', ['L', 'P', 'O']);
+            $table->foreignId('kategori_id');
             $table->foreignId('golongan_id');
             $table->foreignId('jabatan_id');
             $table->foreignId('fungsional_id');
-            $table->foreignId('unit_kerja_id');
+            $table->foreignId('unit_id');
             $table->timestamps();
         });
     }

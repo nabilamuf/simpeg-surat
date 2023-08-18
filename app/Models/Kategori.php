@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Jabatan;
+use App\Models\Pegawai;
 use App\Models\Golongan;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -20,5 +21,9 @@ class Kategori extends Model
     public function golongans()
     {
         return $this->hasMany(Golongan::class);
+    }
+    public function pegawais()
+    {
+        return $this->hasMany(Pegawai::class);
     }
 }

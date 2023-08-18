@@ -169,7 +169,7 @@
           <div id="collapsePagesPNS" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">pegawai :</h6>
-              <a class="collapse-item" href="/list">PNS </a>
+              <a class="collapse-item" href="/list_pns">PNS</a>
               <h6 class="collapse-header">cetak surat :</h6>
               <a class="collapse-item" href="/pegawai/tmagama/tambah"> Surat Cuti</a>
               <a class="collapse-item" href="/pegawai/tmdiklat/tambah"> Surat Rekomendasi</a>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUnitKerjaTable extends Migration
+class CreateUnitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateUnitKerjaTable extends Migration
      */
     public function up()
     {
-        Schema::create('unit_kerja', function (Blueprint $table) {
-            $table->increments('kode_unitkerja');
-            $table->string('unit_kerja');
-            $table->string('kepala')->nullable();
-            $table->string('nama')->nullable();
-            $table->string('ket')->nullable();
+        Schema::create('units', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('slug')->unique();
+            // $table->string('kepala')->nullable();
+            // $table->string('nama')->nullable();
+            // $table->string('ket')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateUnitKerjaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('unit_kerja');
+        Schema::dropIfExists('units');
     }
 }

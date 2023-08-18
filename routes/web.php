@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ExportController;
 use App\Http\Controllers\ListPegawaiController;
+use App\Http\Controllers\SuratContoroller;
 
 
 /*
@@ -35,12 +36,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', function () {
         return view('pegawai.profile');
     });
-    Route::get('/list_pns', [App\Http\Controllers\ListPegawaiController::class, 'pns']);
-    Route::get('/list_kontrak', [App\Http\Controllers\ListPegawaiController::class, 'index']);
-    Route::get('/list_p3k', [App\Http\Controllers\ListPegawaiController::class, 'index']);
+    Route::get('/list/{kategori:slug}', [App\Http\Controllers\ListPegawaiController::class, 'list']);
+    Route::get('/surat_rekom/{kategori:slug}', [SuratContoroller::class, 'rekomendasi']);
 
     // export 
-    Route::get('/list/print', [App\Http\Controllers\ExportController::class, 'print']);
+    Route::get('/export/print', [ExportController::class, 'print']);
 
 
     // Route::get('/pegawai/tmunitkeja/tambah', [App\Http\Controllers\unitkerjaController::class, 'index']);

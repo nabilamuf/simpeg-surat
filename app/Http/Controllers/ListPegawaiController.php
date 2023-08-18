@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\models\Pegawai;
 
 class ListPegawaiController extends Controller
 {
@@ -30,9 +32,9 @@ class ListPegawaiController extends Controller
         // return response()->json(['data' => $pegawai]);
     }
 
-    public function pns()
+    public function list(Kategori $kategori)
     {
-        $pegawai = \App\Models\Pegawai::all();
+        $pegawai = Pegawai::where('kategori_id', 2);
         $user = \App\Models\User::all();
         // $agama = \App\Models\Agama::all();
         // $pendidikan = \App\Models\Pendidikan::all();
@@ -40,11 +42,14 @@ class ListPegawaiController extends Controller
 
         return view('pegawai.list', [
 
-            'pegawai' => $pegawai,
-            'user' => $user
+            'title' => $kategori->nama,
+            'user' => $user,
             // 'agama' => $agama,
             // 'pendidikan' => $pendidikan,
             // 'jbts' => $jbts
+            // 'title' => $category->name,
+            'pegawai' => $kategori->pegawais,
+            'kategori' => $kategori->nama
         ]);
     }
 

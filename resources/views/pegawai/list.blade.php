@@ -15,12 +15,12 @@
   </div>
   <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">List Pegawai PNS</h6>
+      <h6 class="m-0 font-weight-bold text-primary">List Pegawai {{ $title }}</h6>
     </div>
     <div class="card-body">
       <button type="button" class="btn btn-primary mb-3" >
         <i class="fa fa-plus">
-          <a href="/list/print" class="text-white" target="_blank">Export Data</a>
+          <a href="/export/print" class="text-white" target="_blank">Export Data</a>
         </i>
       </button>
       <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#exampleModal">
@@ -29,7 +29,7 @@
       <div class="table-responsive">
         <div class="row"><div class="col-sm-12"><table class="table table-bordered dataTable" id="dataTable" role="grid" aria-describedby="dataTable_info" style="width: 100%;" width="100%" cellspacing="0"> 
           <thead>
-            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 162px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">Id</th>
+            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 162px;" aria-sort="ascending" aria-label="Name: activate to sort column descending">No</th>
             <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 248px;" aria-label="Position: activate to sort column ascending">NIP</th>
             <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 116px;" aria-label="Office: activate to sort column ascending">Nama</th>
             <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" style="width: 116px;" aria-label="Office: activate to sort column ascending">Golongan</th>
@@ -49,9 +49,10 @@
           {{-- <tfoot>
           </tfoot> --}}
           <tbody>
+            <?php $no = 1 ?>
             @foreach($pegawai as $p)
               <tr role="row" class="odd">
-                <td>{{$p->id}}</td>
+                <td>{{$no++}}</td>
                 <td>{{$p->nip}}</td>
                 <td>{{$p->nama}}</td>
                 <td>{{$p->golongan->nama}}</td>
